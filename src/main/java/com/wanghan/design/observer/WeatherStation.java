@@ -1,4 +1,4 @@
-package observer;
+package com.wanghan.design.observer;
 
 public class WeatherStation {
 

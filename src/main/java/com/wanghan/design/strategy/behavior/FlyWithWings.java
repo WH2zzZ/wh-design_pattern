@@ -1,4 +1,4 @@
-package strategy.behavior;
+package com.wanghan.design.strategy.behavior;
 
 public class FlyWithWings implements FlyBehavior {
     @Override

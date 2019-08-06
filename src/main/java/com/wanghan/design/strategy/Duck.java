@@ -1,6 +1,6 @@
-package strategy;
+package com.wanghan.design.strategy;
 
-import strategy.behavior.FlyBehavior;
+import com.wanghan.design.strategy.behavior.FlyBehavior;
 
 public class Duck {
     private FlyBehavior flyBehavior;

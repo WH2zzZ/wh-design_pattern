@@ -1,6 +1,6 @@
-package strategy;
+package com.wanghan.design.strategy;
 
-import strategy.behavior.FlyNoWay;
+import com.wanghan.design.strategy.behavior.FlyNoWay;
 
 /**
  * strategy pattern :

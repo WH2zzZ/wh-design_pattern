@@ -1,4 +1,4 @@
-package observer;
+package com.wanghan.design.observer;
 
 /**
  * 观察者,会受到主题变化的通知
