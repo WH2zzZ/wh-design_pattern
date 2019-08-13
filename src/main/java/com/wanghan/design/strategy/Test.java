@@ -1,6 +1,7 @@
 package com.wanghan.design.strategy;
 
 import com.wanghan.design.strategy.behavior.FlyNoWay;
+import com.wanghan.design.strategy.behavior.FlyWithWings;
 
 /**
  * strategy pattern :
@@ -18,6 +19,8 @@ public class Test {
 
         RubberDuck rubberDuck = new RubberDuck(new FlyNoWay());
 
+        rubberDuck.fly();
+        rubberDuck.setFlyBehavior(new FlyWithWings());
         rubberDuck.fly();
     }
 }

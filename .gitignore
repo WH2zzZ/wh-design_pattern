@@ -34,3 +34,6 @@ hs_err_pid*
 .idea/wh-design_pattern.iml
 src/main/resources/
 src/test/
+target/
+target/classes/META-INF/
+target/generated-sources/

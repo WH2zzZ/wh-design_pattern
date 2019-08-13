@@ -1,4 +1,4 @@
-package com.wanghan.design.observer;
+package com.wanghan.design.observer.my.observer;
 
 /**
  * 观察者

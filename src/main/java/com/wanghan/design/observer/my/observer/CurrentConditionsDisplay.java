@@ -1,23 +1,24 @@
-package com.wanghan.design.observer;
+package com.wanghan.design.observer.my.observer;
+
+import com.wanghan.design.observer.my.observer.DisplayElement;
+import com.wanghan.design.observer.my.subject.Subject;
+import lombok.Data;
 
 /**
  * 观察者,会受到主题变化的通知
  * @Author WangHan
  * @Date 0:08 2019/6/17
  */
-public class CurrentConditionsDisplay implements ObServer, DisplayElement{
+@Data
+public class CurrentConditionsDisplay implements ObServer, DisplayElement {
     private float temperature;
     private float humideity;
     private float pressure;
 
-    private Subject weatherData;
-
-    private CurrentConditionsDisplay(Subject weatherData) {
-        this.weatherData = weatherData;
-    }
+    private CurrentConditionsDisplay() {}
 
     public static CurrentConditionsDisplay instance(Subject weatherData){
-        CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
+        CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay();
         weatherData.registerObservers(currentConditionsDisplay);
         return currentConditionsDisplay;
     }

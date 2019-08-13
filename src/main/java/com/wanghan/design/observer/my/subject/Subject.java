@@ -1,4 +1,6 @@
-package com.wanghan.design.observer;
+package com.wanghan.design.observer.my.subject;
+
+import com.wanghan.design.observer.my.observer.ObServer;
 
 /**
  * 主题

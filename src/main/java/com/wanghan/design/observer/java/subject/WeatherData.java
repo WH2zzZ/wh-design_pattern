@@ -1,7 +1,11 @@
-package com.wanghan.design.observer;
+package com.wanghan.design.observer.java.subject;
+
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 /**
  * 天气数据主题
@@ -9,32 +13,12 @@ import java.util.List;
  * @Author WangHan
  * @Date 23:59 2019/6/16
  */
-public class WeatherData implements Subject {
-
-    private List<ObServer> obServerList;
+@Data
+public class WeatherData extends Observable {
 
     private float temperature;
     private float humideity;
     private float pressure;
-
-    public WeatherData() {
-        obServerList = new ArrayList<>();
-    }
-
-    @Override
-    public void registerObservers(ObServer o) {
-        obServerList.add(o);
-    }
-
-    @Override
-    public void removeObservers(ObServer o) {
-        obServerList.removeIf(o::equals);
-    }
-
-    @Override
-    public void notifyObservers() {
-        obServerList.forEach(obServer -> obServer.update(temperature, humideity, pressure));
-    }
 
     /**
      * 一但天气数据发生变化,会调用此方法
@@ -44,10 +28,12 @@ public class WeatherData implements Subject {
      * @return void
      */
     private void measurememtsChanged(float temperature, float humideity, float pressure){
+        setChanged();
         notifyObservers();
     }
 
     public void setMeasurememtsChanged(float temperature, float humideity, float pressure){
+        setChanged();
         this.temperature = temperature;
         this.humideity = humideity;
         this.pressure = pressure;
