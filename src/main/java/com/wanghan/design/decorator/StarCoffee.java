@@ -2,7 +2,6 @@ package com.wanghan.design.decorator;
 
 import com.wanghan.design.decorator.component.Beverage;
 import com.wanghan.design.decorator.component.Espresso;
-import com.wanghan.design.decorator.decorate.CondimentDecorator;
 import com.wanghan.design.decorator.decorate.Mocha;
 
 /**
